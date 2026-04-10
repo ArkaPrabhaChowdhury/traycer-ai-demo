@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Traycer Core
+> **Architectural Planning & Verification Layer for AI Coding Agents**
 
-## Getting Started
+Traycer Core is a high-fidelity planning engine designed to bridge the gap between high-level user objectives and actionable, verified technical roadmaps. It implements an "Architect-in-the-loop" workflow to ensure that AI agents have the precision and context required for complex software development.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Architect-in-the-Loop Discovery**: A multi-phase workflow where the AI clarifies non-technical requirements before generating a plan.
+- **Roadmap Synthesis**: Automatically generates a structured technical graph representing the implementation path.
+- **Live Verification**: A simulated synthesis engine that verifies technical specifications in real-time.
+- **Spec Export**: Export architectural decisions and roadmaps as production-ready PRDs (Markdown).
+- **Premium UI**: A sleek, "Surgical" aesthetic built with specialized dark mode themes and smooth motion transitions.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & Modern CSS
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **LLM Context**: Optimized for high-performance inference (Groq/Llama 3)
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm / pnpm / yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ArkaPrabhaChowdhury/traycer-ai-demo.git
+   cd traycer-demo
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root and add your API keys:
+   ```env
+   GROQ_API_KEY=your_api_key_here
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📐 Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Traycer operates on a sequence of cognitive phases:
+1. **Analyze**: Deconstructs the initial prompt into technical components.
+2. **Clarify**: Asks clarifying questions to narrow down implementation details.
+3. **Synthesize**: Builds a visual dependency graph of tasks.
+4. **Verify**: Simulates structural checks to ensure architectural integrity.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
